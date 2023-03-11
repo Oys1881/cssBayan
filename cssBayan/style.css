@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    /*outline: 1px solid #663d15;*/
+}
+
+body {
+    background-color: bisque;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+.container {
+    margin: 4% auto;
+    max-width: 50%;
+}
+
+.bayan-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.meme-item {
+    color: blue;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-top: 1px solid saddlebrown;
+    border-bottom:  1px solid saddlebrown;
+}
+
+.meme-check {
+  /*visibility: hidden;
+    appearance: none;*/
+    display: none;   /*!!!!!!!!!!!!!!11111111111*/
+}
+
+
+
+.meme-title {
+    display: block;                    /*????????/*/
+    cursor: pointer;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.meme-joke {
+    height: 0;
+    display: block;  /*whyr*/
+    max-width: 50%;
+    margin: auto;
+    transition: all 500ms ease;                   /*???????????????????????????????????*/   
+}
+
+.cross {
+    height: 0;
+    margin: auto 0;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    transition-duration: 0.5s;                     /*speed*/   
+}
