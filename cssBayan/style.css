@@ -1,13 +1,14 @@
 * {
     box-sizing: border-box;
-    /*outline: 1px solid #663d15;   margin-right: calc(-1 * (100vw - 100%));*/
+    /*outline: 1px solid #663d15;   */
 }
 
 body {
     background-color: bisque;
+  /*  margin-right: calc(-1 * (100vw - 100%));*/
  
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.12em;
+    font-size: 1em;
 }
 
 p {
@@ -95,13 +96,6 @@ p {
 }
 
 
-/*test*/
-
-/*.meme-item:checked .meme-title {
-    padding-bottom: 1em;
-}                                      dont wark*/
-
-
 
 
 /*effects*/
@@ -130,6 +124,9 @@ p {
     transform: rotate(45deg);
 }
 */
+/*.meme-item:checked .meme-title {
+    padding-bottom: 1em;
+}                                      dont wark*/
 
 .meme-check:checked ~ .top-container{       /*checkbox color title*/
     color: rgb(0, 0, 0);
