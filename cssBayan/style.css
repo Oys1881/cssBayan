@@ -7,11 +7,12 @@ body {
     background-color: bisque;
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2em;
+
+    font-size: 1.5em;
 }
 
 .container {
-    margin: 4% auto;
+    margin: 1% auto;
     max-width: 50%;
 }
 
@@ -45,10 +46,16 @@ body {
 
 .meme-joke {
     height: 0;
-    display: block;  /*whyr*/
-    max-width: 50%;
+    display: block;  /*whyr */
+    width: 40%;
+    overflow: hidden;
     margin: auto;
     transition: all 500ms ease;                   /*???????????????????????????????????*/   
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: center;
+    background-size: cover;
 }
 
 .cross {
@@ -59,12 +66,25 @@ body {
     transition-duration: 0.5s;                     /*speed*/   
 }
 
-.test {
-    border: 5px solid saddlebrown;
-    margin-top: 1em;
+.meme-url-one {
+    background-image: url(img/1svin.gif);
 }
 
+.meme-url-two {
+    background-image: url(img/2monkey.gif);
+}
 
+.meme-url-three {
+    background-image: url(img/3code.gif);
+}
+
+.meme-url-four {
+    background-image: url(img/4bob.gif);
+}
+
+.meme-url-five {
+    background-image: url(img/5dog.gif);
+}
 
 /*effects*/
 
@@ -85,7 +105,7 @@ body {
 
 
 .meme-check:checked ~ .meme-joke {        /*checkbox show meme */
-    min-height: 10em;
+    height: 15em;
 }
 
 /*.meme-check:checked ~ div .cross {           checkbox show cross
@@ -99,7 +119,7 @@ body {
 }
 
 .meme-check:hover ~ .meme-joke {        /*hover show meme */
-    height: 10em;
+    height: 15em;
 }
 
 .meme-check:hover ~ div .cross {           /*hover show cross*/
@@ -113,4 +133,34 @@ body {
 
 .bayan-container:hover  .cross {              /*allhover show cross*/ 
     height: 1.5em;
+}
+
+@media (max-width: 1050px) {
+
+    body {
+        font-size: 1.4em;
+    }
+    
+    .container {
+        margin: 1% auto;
+        max-width: 90%;
+    }
+
+    .meme-joke {
+        width: 40%;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    body {
+        font-size: 0.7em;
+    }
+    
+    .container {
+        margin: 3% auto;
+        max-width: 95%;
+    }
 }
