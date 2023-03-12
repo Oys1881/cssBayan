@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    /*outline: 1px solid #663d15;   */
+}
+
+body {
+    background-color: bisque;
+    margin-right: calc(-1 * (100vw - 100%));
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+h1 {
+    font-size: 1.6em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+.bayan-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.meme-item {
+    color: blue;
+    border-top: 0.15em solid saddlebrown;
+}
+
+.meme-check {
+    display: none;
+}
+
+.meme-me {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+.meme-title {
+    display: block;
+    cursor: pointer;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.meme-joke {
+    height: 0;
+    display: block;
+    width: 40%;
+    overflow: hidden;
+    margin: auto;
+    transition: all 0.7s ease;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: center;
+    background-size: cover;
+}
+
+.cross {
+    overflow: hidden;
+    height: 0;
+    margin: auto 0;
+    margin-right: 0.5em;
+    margin-left: 0.1em;
+    transition-duration: 0.5s;                     /*speed*/   
+}
+
+.meme-url-one {
+    background-image: url(img/1svin.gif);
+}
+
+.meme-url-two {
+    background-image: url(img/2monkey.gif);
+}
+
+.meme-url-three {
+    background-image: url(img/3code.gif);
+}
+
+.meme-url-four {
+    background-image: url(img/4bob.gif);
+}
+
+.meme-url-five {
+    background-image: url(img/5dog.gif);
+}
+
+
+
+
+/*effects*/
+
+.meme-item:active p {                    /*active color title*/
+    color: blue;
+    opacity: 0.8;
+}
+
+.meme-item:active .meme-joke {            /*active meme*/
+    opacity: 0.8;
+} 
+
+.meme-item:active .cross {               /*active cross*/
+    fill: blue;
+    opacity: 0.8;
+}
+
+.meme-check:checked ~ .meme-joke {        /*checkbox show meme  */
+    height: 15em;
+    margin-bottom: 0.5em;
+}
+
+/*.meme-check:checked ~ div .cross {           checkbox show cross
+    height: 1.5em;
+    transform: rotate(45deg);
+}
+*/
+/*.meme-item:checked .meme-title {
+    padding-bottom: 1em;
+}                                      dont wark*/
+
+.meme-check:checked ~ .top-container{       /*checkbox color title*/
+    color: rgb(0, 0, 0);
+}
+
+@media (hover: hover) {
+    .meme-check:hover ~ .meme-joke {        /*hover show meme */
+        height: 15em;
+        margin-bottom: 0.5em;
+    }
+    .meme-check:hover + span .cross {           /*hover show cross*/
+        height: 1.5em;
+        transform: rotate(45deg);
+    }
+    .bayan-container:hover  .meme-item  {        /*all hover color title*/  
+        color: black;
+    }
+    .bayan-container:hover  .cross {              /*allhover show cross*/ 
+        height: 1.5em;
+    }
+    /*.meme-item:hover .meme-title {             padding for joke
+        padding-bottom: 1em;
+    } */
+}
+
+@media (max-width: 1050px) {
+    body {
+        font-size: 1.4em;
+    }
+    .container {
+        margin: 1% auto;
+        max-width: 90%;
+    }
+    .meme-joke {
+        width: 40%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 0.9em;
+    }
+    .container {
+        margin: 3% auto;
+        max-width: 95%;
+    }
+    .meme-joke {
+        width: 50%;
+        margin: auto;
+    }
+}
