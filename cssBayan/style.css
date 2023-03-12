@@ -1,14 +1,17 @@
 * {
     box-sizing: border-box;
-    outline: 1px solid #663d15;/**/
+    /*outline: 1px solid #663d15;   margin-right: calc(-1 * (100vw - 100%));*/
 }
 
 body {
     background-color: bisque;
-
+ 
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.12em;
+}
 
-    font-size: 1.5em;
+p {
+    display: block;
 }
 
 .container {
@@ -23,34 +26,38 @@ body {
 
 .meme-item {
     color: blue;
-
+    border-top: 0.15em solid saddlebrown;
 }
 
 .meme-check {
-  /*visibility: hidden;
-    appearance: none;*/
-    display: none;   /*!!!!!!!!!!!!!!11111111111*/
+    display: none;
 }
 
-
+.meme-me {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
 
 .meme-title {
-    display: block;                    /*????????/*/
+    display: block;
     cursor: pointer;
 }
 
 .top-container {
     display: flex;
     justify-content: space-between;
+
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .meme-joke {
     height: 0;
-    display: block;  /*whyr */
+    display: block;
     width: 40%;
     overflow: hidden;
     margin: auto;
-    transition: all 500ms ease;                   /*???????????????????????????????????*/   
+    transition: all 0.7s ease;
 
     background-repeat: no-repeat;
     background-position: center;
@@ -59,10 +66,11 @@ body {
 }
 
 .cross {
+    overflow: hidden;
     height: 0;
     margin: auto 0;
     margin-right: 0.5em;
-    margin-left: 0.5em;
+    margin-left: 0.1em;
     transition-duration: 0.5s;                     /*speed*/   
 }
 
@@ -86,6 +94,16 @@ body {
     background-image: url(img/5dog.gif);
 }
 
+
+/*test*/
+
+/*.meme-item:checked .meme-title {
+    padding-bottom: 1em;
+}                                      dont wark*/
+
+
+
+
 /*effects*/
 
 .meme-item:active p {                    /*active color title*/
@@ -102,10 +120,9 @@ body {
     opacity: 0.8;
 }
 
-
-
-.meme-check:checked ~ .meme-joke {        /*checkbox show meme */
+.meme-check:checked ~ .meme-joke {        /*checkbox show meme  */
     height: 15em;
+    margin-bottom: 0.5em;
 }
 
 /*.meme-check:checked ~ div .cross {           checkbox show cross
@@ -118,59 +135,48 @@ body {
     color: rgb(0, 0, 0);
 }
 
-
-
-
 @media (hover: hover) {
     .meme-check:hover ~ .meme-joke {        /*hover show meme */
-    height: 15em;
+        height: 15em;
+        margin-bottom: 0.5em;
+    }
+    .meme-check:hover + span .cross {           /*hover show cross*/
+        height: 1.5em;
+        transform: rotate(45deg);
+    }
+    .bayan-container:hover  .meme-item  {        /*all hover color title*/  
+        color: black;
+    }
+    .bayan-container:hover  .cross {              /*allhover show cross*/ 
+        height: 1.5em;
+    }
+    /*.meme-item:hover .meme-title {             padding for joke
+        padding-bottom: 1em;
+    } */
 }
-
-.meme-check:hover ~ div .cross {           /*hover show cross*/
-    height: 1.5em;
-    transform: rotate(45deg);
-}
-
-.bayan-container:hover  .meme-item  {        /*all hover color title*/  
-    color: black;
-}
-
-.bayan-container:hover  .cross {              /*allhover show cross*/ 
-    height: 1.5em;
-}
-}
-
-
 
 @media (max-width: 1050px) {
-
     body {
         font-size: 1.4em;
     }
-    
     .container {
         margin: 1% auto;
         max-width: 90%;
     }
-
     .meme-joke {
         width: 40%;
         margin: auto;
     }
-
 }
 
 @media (max-width: 700px) {
-
     body {
-        font-size: 0.7em;
+        font-size: 0.9em;
     }
-    
     .container {
         margin: 3% auto;
         max-width: 95%;
     }
-
     .meme-joke {
         width: 50%;
         margin: auto;
