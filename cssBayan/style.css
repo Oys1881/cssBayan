@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    /*outline: 1px solid #663d15;*/
+    outline: 1px solid #663d15;/**/
 }
 
 body {
@@ -23,10 +23,6 @@ body {
 .meme-item {
     color: blue;
 
-    margin-top: 1em;
-    margin-bottom: 1em;
-    border-top: 1px solid saddlebrown;
-    border-bottom:  1px solid saddlebrown;
 }
 
 .meme-check {
@@ -61,4 +57,60 @@ body {
     margin-right: 0.5em;
     margin-left: 0.5em;
     transition-duration: 0.5s;                     /*speed*/   
+}
+
+.test {
+    border: 5px solid saddlebrown;
+    margin-top: 1em;
+}
+
+
+
+/*effects*/
+
+.meme-item:active p {                    /*active color title*/
+    color: blue;
+    opacity: 0.8;
+}
+
+.meme-item:active .meme-joke {            /*active meme*/
+    opacity: 0.8;
+} 
+
+.meme-item:active .cross {               /*active cross*/
+    fill: blue;
+    opacity: 0.8;
+}
+
+
+
+.meme-check:checked ~ .meme-joke {        /*checkbox show meme */
+    min-height: 10em;
+}
+
+/*.meme-check:checked ~ div .cross {           checkbox show cross
+    height: 1.5em;
+    transform: rotate(45deg);
+}
+*/
+
+.meme-check:checked ~ .top-container{       /*checkbox color title*/
+    color: rgb(0, 0, 0);
+}
+
+.meme-check:hover ~ .meme-joke {        /*hover show meme */
+    height: 10em;
+}
+
+.meme-check:hover ~ div .cross {           /*hover show cross*/
+    height: 1.5em;
+    transform: rotate(45deg);
+}
+
+.bayan-container:hover  .meme-item  {        /*all hover color title*/  
+    color: black;
+}
+
+.bayan-container:hover  .cross {              /*allhover show cross*/ 
+    height: 1.5em;
 }
